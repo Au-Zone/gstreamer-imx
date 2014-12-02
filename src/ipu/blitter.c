@@ -27,7 +27,7 @@
 #include <sys/mman.h>
 #include <sys/types.h>
 #include <linux/fb.h>
-#include <linux/ipu.h>
+#include <include/uapi/linux/ipu.h>
 #include <gst/video/gstvideometa.h>
 #include "../common/phys_mem_meta.h"
 #include "../common/phys_mem_buffer_pool.h"

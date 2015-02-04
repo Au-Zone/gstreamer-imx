@@ -21,7 +21,7 @@
 #include <string.h>
 #include <sys/ioctl.h>
 #include <sys/mman.h>
-#include <linux/ipu.h>
+#include <include/uapi/linux/ipu.h>
 #include "../common/phys_mem_meta.h"
 #include "device.h"
 

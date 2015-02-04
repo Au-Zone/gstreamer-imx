@@ -1,0 +1,15 @@
+#ifndef __CONFIG_H__
+#define __CONFIG_H__
+
+#define GST_PACKAGE_NAME "gstreamer-imx"
+#define GST_PACKAGE_ORIGIN "http://github.com/Au-Zone/gstreamer-imx"
+#define PACKAGE "gstreamer-imx"
+#define VERSION "0.9.9"
+
+#define HAVE_GSTREAMER 1
+#define HAVE_GSTREAMER_BASE 1
+#define HAVE_GSTREAMER_VIDEO 1
+#define HAVE_FSLVPUWRAPPER 1
+
+#endif /* __CONFIG_H__ */
+

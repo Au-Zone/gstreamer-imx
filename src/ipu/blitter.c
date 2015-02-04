@@ -22,7 +22,7 @@
 #include <sys/ioctl.h>
 #include <string.h>
 #include <errno.h>
-#include <linux/ipu.h>
+#include <include/uapi/linux/ipu.h>
 #include "blitter.h"
 #include "allocator.h"
 #include "device.h"

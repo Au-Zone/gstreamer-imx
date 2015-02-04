@@ -46,38 +46,12 @@ You'll need a GStreamer 1.2 installation, and Freescale's VPU wrapper library (a
 Building and installing
 -----------------------
 
-This project uses the [waf meta build system](https://code.google.com/p/waf/). To configure , first set
-the following environment variables to whatever is necessary for cross compilation for your platform:
+Au-Zone has replaced the original WAF build system with a standard CMake build system to allow Debian
+packaging as WAF has numerous issues which make it unsupported by Debian.
 
-* `CC`
-* `CFLAGS`
-* `LDFLAGS`
-* `PKG_CONFIG_PATH`
-* `PKG_CONFIG_SYSROOT_DIR`
-
-Then, run:
-
-    ./waf configure --prefix=PREFIX --kernel-headers=KERNEL-HEADER-PATH
-
-(The aforementioned environment variables are only necessary for this configure call.)
-PREFIX defines the installation prefix, that is, where the built binaries will be installed.
-KERNEL-HEADER-PATH defines the path to the Linux kernel headers (where linux/ipu.h can be found).
+KERNEL_HEADERS defines the path to the Linux kernel headers (where linux/ipu.h can be found).
 It is currently unfortunately necessary to set this path if linux/ipu.h is not in the root filesystem's
 include directory already. (Not to be confused with the ipu.h from the imx-lib.) Without this path,
-the header is not found, and elements using the IPU will not be built.
-
-If gstreamer-imx is to be built for Android, add the `--build-for-android` switch:
-
-    ./waf configure --prefix=PREFIX --kernel-headers=KERNEL-HEADER-RPATH --build-for-android
-
-Note that for Android, plugins are built as static libraries.
-
-Once configuration is complete, run:
-
-    ./waf
-
-This builds the plugins.
-Finally, to install, run:
-
-    ./waf install
+the header is not found, and elements using the IPU will not be built.  By default CMake will attempt
+to find linux/ipu.h using /usr/src/linux-headers-`uname -r`/include as a HINT.
 

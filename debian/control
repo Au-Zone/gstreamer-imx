@@ -1,0 +1,14 @@
+Source: gstreamer-imx
+Maintainer: Sébastien Taylor <sebastien@au-zone.com>
+Section: multimedia
+Priority: optional
+Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 9), cmake, libgstreamer1.0-dev, libgstreamer-plugins-base1.0-dev
+
+Package: gstreamer-imx
+Architecture: armhf
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: GStreamer i.MX6 Plugins
+  This is a set of GStreamer 1.0 plugins for plugins for Freescale's i.MX platform,
+  with emphasis on video en/decoding using the i.MX VPU engine.
+

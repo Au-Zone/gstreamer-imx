@@ -12,4 +12,5 @@ target_link_libraries(
 )
 
 install(TARGETS gstimxcommon LIBRARY DESTINATION lib)
+install(FILES ${HEADERS} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/gstreamer-imx COMPONENT development)
 

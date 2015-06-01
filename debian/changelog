@@ -1,0 +1,11 @@
+gstreamer-imx (0.9.9-2) trusty; urgency=medium
+
+  * Updated VPU plugin to correctly link to libfslvpuwrap. 
+
+ -- Sébastien Taylor <sebastien@au-zone.com>  Tue, 02 Dec 2014 14:43:54 -0700
+
+gstreamer-imx (0.9.9-1) trusty; urgency=medium
+
+  * Initial release.
+
+ -- Sébastien Taylor <sebastien@au-zone.com>  Mon, 01 Dec 2014 14:49:22 -0700
